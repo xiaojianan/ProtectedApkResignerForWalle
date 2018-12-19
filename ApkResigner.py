@@ -76,7 +76,7 @@ parentPath = curFileDir() + getBackslash()
 #config
 libPath = parentPath + "lib" + getBackslash()
 buildToolsPath =  config.sdkBuildToolPath + getBackslash()
-checkAndroidV2SignaturePath = libPath + "CheckAndroidV2Signature.jar"
+checkAndroidV2SignaturePath = libPath + "CheckAndroidSignature.jar"
 walleChannelWritterPath = libPath + "walle-cli-all.jar"
 keystorePath = config.keystorePath
 keyAlias = config.keyAlias
@@ -98,8 +98,8 @@ if len(config.channelFilePath) > 0:
   channelFilePath = config.channelFilePath
 
 
-zipalignedApkPath = protectedSourceApkPath[0 : -4] + "_aligned.apk"
-signedApkPath = zipalignedApkPath[0 : -4] + "_signed.apk"
+zipalignedApkPath = protectedSourceApkPath[0 : -4] + "_" + ".apk"
+signedApkPath = zipalignedApkPath[0 : -4] + config.version + ".apk"
 
 # 创建Channels输出文件夹
 createChannelsDir()

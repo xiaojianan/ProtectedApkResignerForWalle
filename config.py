@@ -7,6 +7,7 @@ keystorePath = "..path/your.keystore"
 keyAlias = "your keyAlias"
 keystorePassword = "your keystorePassword"
 keyPassword = "your keyPassword"
+version = "v1.0.0"
 
 #加固后的源文件名（未重签名）
 protectedSourceApkName = "your protected.apk"
